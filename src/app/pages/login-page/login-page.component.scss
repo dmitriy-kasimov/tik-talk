@@ -1,5 +1,7 @@
-.profile-card__wrapper{
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+:host{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100dvh;
+  align-items: center;
+  margin: 0 5%;
 }
