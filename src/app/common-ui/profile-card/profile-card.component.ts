@@ -5,8 +5,9 @@ import {ImgUrlPipe} from '../../helpers/pipes/img-url.pipe';
 @Component({
   selector: 'app-profile-card',
   imports: [
-    ImgUrlPipe
+    ImgUrlPipe,
   ],
+  standalone: true,
   templateUrl: './profile-card.component.html',
   styleUrl: './profile-card.component.scss'
 })
