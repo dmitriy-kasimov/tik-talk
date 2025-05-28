@@ -38,7 +38,8 @@
     width: 16px;
     height: 16px;
 
-    &:hover{
+    &:hover,
+    &:focus-visible {
       color: var(--primary-color);
       fill: var(--primary-color);
     }
