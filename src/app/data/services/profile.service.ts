@@ -18,10 +18,10 @@ export class ProfileService {
   }
 
   getMe(){
-    return this.http.get<IProfile>(`${this.baseApiUrl}account/me`).pipe(
-      tap(res => this.me.set(res))
-    )
-
+    return this.http.get<IProfile>(`${this.baseApiUrl}account/me`)
+      .pipe(
+        tap(res =>  this.me.set(res))
+      )
   }
 
   getSubscribersShortList(){

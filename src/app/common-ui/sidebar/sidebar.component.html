@@ -24,14 +24,14 @@
   <svg icon="arrow-right" class="to-subscribers-icon"></svg>
 </div>
 
-
 <footer class="sidebar__footer">
-<!--alias: change me() to me-->
+  <pre>here!</pre>
   @if(me(); as me){
+
     @if(me.avatarUrl){
       <img [src]="me.avatarUrl | imgUrl" alt="" class="sidebar__footer-avatar">
-    } @else {
-      <img src="/assets/images/avatar-placeholder.png" alt="" class="sidebar__footer-avatar">
+    }@else {
+      <img src="/assets/images/avatar-placeholder.png" alt="mock-avatar" class="sidebar__footer-avatar">
     }
 
     <span class="medium-text username-text">{{me.username}}</span>

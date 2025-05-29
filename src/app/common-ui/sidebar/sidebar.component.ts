@@ -14,8 +14,8 @@ import {ImgUrlPipe} from '../../helpers/pipes/img-url.pipe';
     SubscriberCardComponent,
     RouterLink,
     AsyncPipe,
-    JsonPipe,
-    ImgUrlPipe
+    ImgUrlPipe,
+    JsonPipe
   ],
   standalone: true,
   templateUrl: './sidebar.component.html',
