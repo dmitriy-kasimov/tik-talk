@@ -24,6 +24,10 @@ export class ProfileService {
       )
   }
 
+  getAccount(id: string){
+    return this.http.get<IProfile>(`${this.baseApiUrl}account/account/${id}`);
+  }
+
   getSubscribersShortList(){
     return this.http.get<IPagination<IProfile>>(`${this.baseApiUrl}account/subscribers/`).pipe(
       map(res => res.items.slice(0,3)),
