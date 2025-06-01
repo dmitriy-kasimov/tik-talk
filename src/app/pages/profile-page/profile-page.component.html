@@ -1,5 +1,9 @@
 @if(profile$ | async; as profile){
-  <app-profile-header [profile]="profile"></app-profile-header>
+    <header class="profile-page__header">
+        <app-profile-header [profile]="profile"></app-profile-header>
+
+        <a class="btn to-settings-btn" [routerLink]="['/settings']">Редактировать</a>
+    </header>
 }
 
 
