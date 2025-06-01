@@ -4,6 +4,23 @@
 
         <a class="btn to-settings-btn" [routerLink]="['/settings']">Редактировать</a>
     </header>
+
+    <main class="profile-page__body">
+        <div>posts</div>
+       <div>
+           <h3 class="h6 mb16">Подписчики</h3>
+           <div class="subscribers-wrapper">
+               @for(subscriber of subscribers$ | async; track subscriber.id){
+                   <a class="subscriber-avatar-btn" [routerLink]="['/profile', subscriber.id]">
+                       <img [src]="subscriber.avatarUrl | imgUrl" [alt]="subscriber.username" class="subscriber-avatar-img">
+                   </a>
+               }
+               <a class="to-subscribers-search" [routerLink]="['/search']">
+                   <svg icon="add" class="to-subscribers-search-icon"></svg>
+               </a>
+           </div>
+       </div>
+    </main>
 }
 
 

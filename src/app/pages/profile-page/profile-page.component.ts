@@ -4,14 +4,20 @@ import {ProfileService} from '../../data/services/profile.service';
 import {ActivatedRoute, RouterLink} from '@angular/router';
 import {switchMap} from 'rxjs';
 import {toObservable} from '@angular/core/rxjs-interop';
-import {AsyncPipe} from '@angular/common';
+import {AsyncPipe, JsonPipe} from '@angular/common';
+import {SvgIconComponent} from '../../common-ui/svg-icon/svg-icon.component';
+import {SubscriberCardComponent} from '../../common-ui/sidebar/subscriber-card/subscriber-card.component';
+import {ImgUrlPipe} from '../../helpers/pipes/img-url.pipe';
 
 @Component({
   selector: 'app-profile-page',
     imports: [
         ProfileHeaderComponent,
         AsyncPipe,
-        RouterLink
+        RouterLink,
+        ImgUrlPipe,
+        JsonPipe,
+        SvgIconComponent
     ],
   standalone: true,
   templateUrl: './profile-page.component.html',
@@ -22,6 +28,7 @@ export class ProfilePageComponent {
   route = inject(ActivatedRoute)
 
   me$ = toObservable(this.profileService.me)
+  subscribers$ = this.profileService.getSubscribersShortList(5)
 
   profile$ = this.route.params.pipe(
     switchMap(({id}) => {

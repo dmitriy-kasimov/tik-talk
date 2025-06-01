@@ -9,3 +9,39 @@
         text-align: center;
     }
 }
+
+.profile-page__body{
+    display: grid;
+    grid-gap: 64px;
+    grid-template-columns: 1fr 350px;
+}
+
+.subscribers-wrapper{
+    display: flex;
+    gap: 6px;
+
+    .subscriber-avatar-btn{
+        width: 36px;
+        height: 36px;
+
+        .subscriber-avatar-img{
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+        }
+    }
+
+    .to-subscribers-search{
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .to-subscribers-search-icon{
+            width: 14px;
+            height: 14px;
+        }
+    }
+}
