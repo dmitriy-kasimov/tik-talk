@@ -9,7 +9,7 @@
         <div>posts</div>
        <div>
            <h3 class="h6 mb16">Подписчики</h3>
-           <div class="subscribers-wrapper">
+           <div class="subscribers-wrapper mb32">
                @for(subscriber of subscribers$ | async; track subscriber.id){
                    <a class="subscriber-avatar-btn" [routerLink]="['/profile', subscriber.id]">
                        <img [src]="subscriber.avatarUrl | imgUrl" [alt]="subscriber.username" class="subscriber-avatar-img">
@@ -19,6 +19,18 @@
                    <svg icon="add" class="to-subscribers-search-icon"></svg>
                </a>
            </div>
+
+           <h3 class="h6 mb16">Навыки</h3>
+           <div class="stack-wrapper mb32">
+               @for(skill of ['one', 'two', 'three']; track skill){
+                   <div class="skill-tag">
+                       {{skill}}
+                   </div>
+               }
+           </div>
+
+           <h3 class="h6 mb16">О себе</h3>
+           <p class="medium-text">{{profile.description}}</p>
        </div>
     </main>
 }
