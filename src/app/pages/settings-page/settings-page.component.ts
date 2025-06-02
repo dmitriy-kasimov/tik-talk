@@ -6,6 +6,7 @@ import {AsyncPipe} from '@angular/common';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {ProfileService} from '../../data/services/profile.service';
 import {firstValueFrom} from 'rxjs';
+import {AvatarUploadComponent} from './avatar-upload/avatar-upload.component';
 
 @Component({
   selector: 'app-settings-page',
@@ -13,7 +14,8 @@ import {firstValueFrom} from 'rxjs';
         ProfileHeaderComponent,
         RouterLink,
         AsyncPipe,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        AvatarUploadComponent
     ],
     standalone: true,
   templateUrl: './settings-page.component.html',
