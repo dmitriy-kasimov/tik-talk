@@ -7,6 +7,7 @@ import {ImgUrlPipe} from '../../../helpers/pipes/img-url.pipe';
   imports: [
     ImgUrlPipe
   ],
+    standalone: true,
   templateUrl: './subscriber-card.component.html',
   styleUrl: './subscriber-card.component.scss'
 })
